@@ -1,0 +1,200 @@
+@import "colors";
+
+* {
+  transition: all 0.5s ease;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+// HEADER
+header {
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  width: 100vw;
+  height: 150px;
+  position: fixed;
+
+  .video {
+    width: 100vw;
+    height: 50px;
+
+    video {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 0;
+    }
+  }
+
+  #navigation {
+    height: 100px;
+    padding: 0 10%;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+
+    >div {
+      flex: 1;
+    }
+
+    .pages {
+      text-align: right;
+
+      a {
+        font-size: 20px;
+        color: $color-black;
+        text-decoration: none;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+#headerbig {
+  width: 100vw;
+  height: 100vh;
+
+  .background-video {
+    width: 100vw;
+    height: 100%;
+
+    video {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 0;
+    }
+  }
+
+  #navigation {
+    background-color: transparent;
+  }
+
+  .sticktotop {
+    position: absolute;
+    top: 0;
+  }
+}
+
+// NAVIGATION
+// #navigation {
+//   transition: all 0.5s ease;
+//   position: fixed;
+//   right: 0;
+
+//   button {
+//     margin: 10px;
+//     font-size: 30px;
+//     @include button-styling($color-white, $color-none, $color-white, $color-none);
+//   }
+
+//   #nav-open {
+//     display: none;
+//     flex-direction: column;
+//     justify-content: center;
+//     height: 100vh;
+//     background-color: $color-white-bg;
+//     width: 20vw;
+
+//     button {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       @include button-styling($color-black, $color-none, $color-black, $color-none);
+//     }
+
+//     a {
+//       font-size: 20px;
+//       display: block;
+//       padding: 10px 20px;
+//       @include button-styling($color-black, $color-none, $color-white, $color-black-bg);
+//     }
+//   }
+// }
+
+// BODY
+body {
+  margin: 0;
+  padding: 0;
+
+  >div {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+}
+
+body,
+button,
+input {
+  font-family: 'Nunito', sans-serif;
+}
+
+p,
+button,
+a {
+  font-size: 16px;
+}
+
+main {
+  margin-top: 150px;
+  flex: 1;
+
+  .mainbox,
+  .imagesbox,
+  .catalog,
+  .catdetails {
+    margin: 0 10%;
+  }
+
+  .articlebox {
+    padding: 0 10%;
+  }
+}
+
+
+
+// BUTTONS
+.text-button {
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  @include button-styling($color-black, $color-bg, $color-white, $color);
+}
+
+.arrow-button {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  @include button-styling($color-black, $color-none, $color-white, $color);
+
+  @media (max-width:430px) {
+    position: relative;
+    width: 50%;
+    @include button-styling($color-black, $color-none, $color-black, $color-none);
+  }
+}
+
+.image-button {
+  height: 100%;
+  width: 100%;
+  @include button-styling($color-none, $color-none, $color-none, $color-none);
+}
+
+// FOOTER
+footer {
+  background-color: $color;
+  color: $color-white;
+  text-align: center;
+  margin-top: 1%;
+
+  p {
+    padding: 1%;
+    margin: 0;
+  }
+}

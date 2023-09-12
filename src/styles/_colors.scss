@@ -1,0 +1,20 @@
+$color-black: black;
+$color-black-bg: rgb(0, 0, 0, 0.3);
+$color-white: white;
+$color-white-bg: rgb(255, 255, 255, 0.7);
+$color: LightSeaGreen;
+$color-bg: rgb(32, 178, 170, 0.2);
+$color-none: transparent;
+
+@mixin button-styling($text-color, $background-color, $text-color-hover, $background-color-hover) {
+  color: $text-color;
+  background-color: $background-color;
+  border: none;
+  text-decoration: none;
+
+  &:hover {
+    color: $text-color-hover;
+    background-color: $background-color-hover;
+    cursor: pointer;
+  }
+}

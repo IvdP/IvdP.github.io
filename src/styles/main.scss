@@ -4,10 +4,6 @@
   transition: all 0.5s ease;
 }
 
-body {
-  background-color: aquamarine;
-}
-
 // HEADER
 header {
   margin: 0;
@@ -37,11 +33,6 @@ header {
 
     .title {
       margin-left: 10%;
-
-      @media (max-width: 810px) {
-        margin: 0;
-        text-align: center;
-      }
     }
 
     .pages {
@@ -56,6 +47,48 @@ header {
       }
 
       @media (max-width: 810px) {
+        display: none;
+      }
+    }
+
+    .pages-mobile {
+      text-align: right;
+      margin-right: 10%;
+
+
+      button {
+        font-size: 30px;
+        @include button-styling($color-black, $color-none, $color-black, $color-none);
+      }
+
+      #nav-open {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: $color-white-bg;
+
+        button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin: 25px;
+        }
+
+        a {
+          font-size: 20px;
+          display: block;
+          padding: 10px 20px;
+          @include button-styling($color-black, $color-none, $color-white, $color);
+        }
+      }
+
+      @media (min-width: 810px) {
         display: none;
       }
     }
@@ -89,42 +122,6 @@ header {
     box-shadow: unset;
   }
 }
-
-// NAVIGATION
-// #navigation {
-//   transition: all 0.5s ease;
-//   position: fixed;
-//   right: 0;
-
-//   button {
-//     margin: 10px;
-//     font-size: 30px;
-//     @include button-styling($color-white, $color-none, $color-white, $color-none);
-//   }
-
-//   #nav-open {
-//     display: none;
-//     flex-direction: column;
-//     justify-content: center;
-//     height: 100vh;
-//     background-color: $color-white-bg;
-//     width: 20vw;
-
-//     button {
-//       position: absolute;
-//       top: 0;
-//       right: 0;
-//       @include button-styling($color-black, $color-none, $color-black, $color-none);
-//     }
-
-//     a {
-//       font-size: 20px;
-//       display: block;
-//       padding: 10px 20px;
-//       @include button-styling($color-black, $color-none, $color-white, $color-black-bg);
-//     }
-//   }
-// }
 
 // BODY
 body {

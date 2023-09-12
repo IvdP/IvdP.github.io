@@ -1,7 +1,6 @@
 import m from 'mithril';
 import Header from './components/Header';
 import HeaderBig from './components/HeaderBig';
-import Navigation from './components/Navigation';
 import MainBox from './components/MainBox';
 import Footer from './components/Footer';
 

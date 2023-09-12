@@ -3,15 +3,11 @@ import "../styles/main.scss"
 
 const Header: m.Component = {
   view: () => (
-    <header id='header'>
-      <div class='video'>
-        <video autoplay muted loop>
-          <source src="src\media\header_bg.mp4" type="video/mp4" />
-        </video>
+    <div id='header'>
+      <div id='header-color'>
       </div>
-
       <div id='navigation'>
-        <div>
+        <div class='title'>
           <h1>Ilse van de Peppel</h1>
         </div>
         <div class='pages'>
@@ -21,7 +17,7 @@ const Header: m.Component = {
           {m(m.route.Link, { href: '/contact' }, 'Contact')}
         </div>
       </div>
-    </header>
+    </div>
   ),
 };
 

@@ -28,7 +28,7 @@ const Header: m.Component<Attrs> = {
         <div id='pages'>
           <a href='/' onclick={() => { backToTop() }}>Home</a>
           <a href='#anchor_about'>Over mij</a>
-          <a href='/'>Projecten</a>
+          <a href='#anchor_projects'>Projecten</a>
           <a href='/'>Contact</a>
         </div>
         <div id='pages-mobile'>

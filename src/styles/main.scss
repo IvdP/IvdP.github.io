@@ -10,7 +10,7 @@
 }
 
 html {
-  scroll-padding-top: 150px;
+  scroll-padding-top: 175px;
   scroll-behavior: smooth;
 }
 
@@ -204,7 +204,7 @@ p {
 p,
 button,
 a {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .textlink {
@@ -215,6 +215,10 @@ a {
 
 main {
   flex: 1;
+
+  .margin10 {
+    margin: 0 10%;
+  }
 }
 
 #introduction {
@@ -367,16 +371,15 @@ main {
 }
 
 .about {
-  margin: 5% 10%;
-  // height: 600px;
+  margin: 5% 0;
 
   .row {
     display: flex;
-    // height: inherit;
   }
 
   .info {
     flex: 3;
+    margin-right: 5%;
   }
 
   .profile {
@@ -415,6 +418,48 @@ main {
       p {
         margin: 0;
       }
+    }
+  }
+}
+
+.projects {
+  margin: 5% 0;
+  height: 250px;
+  
+  .bg-color {
+    background-color: $color-green-bg;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    height: inherit;
+    width: 100vw;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 0;
+    padding: 2% 0 1%;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0;
+    padding: 0 0 1%;
+  }
+
+  p { 
+    margin: 0;
+  }
+
+  .row {
+    display: flex;
+
+    .column {
+      flex: 1;
+      margin: 1%;
+      padding: 2%;
+      background-color: $color-white;
+      border-radius: 40px;
     }
   }
 }

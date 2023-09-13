@@ -10,7 +10,7 @@
 }
 
 html {
-  scroll-padding-top: 150px;
+  scroll-padding-top: 175px;
   scroll-behavior: smooth;
 }
 
@@ -215,7 +215,7 @@ p {
 p,
 button,
 a {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .textlink {
@@ -226,6 +226,9 @@ a {
 
 main {
   flex: 1;
+}
+main .margin10 {
+  margin: 0 10%;
 }
 
 #introduction {
@@ -359,13 +362,14 @@ main {
 }
 
 .about {
-  margin: 5% 10%;
+  margin: 5% 0;
 }
 .about .row {
   display: flex;
 }
 .about .info {
   flex: 3;
+  margin-right: 5%;
 }
 .about .profile {
   flex: 1;
@@ -398,6 +402,42 @@ main {
 }
 .about .profile .profile-text p {
   margin: 0;
+}
+
+.projects {
+  margin: 5% 0;
+  height: 250px;
+}
+.projects .bg-color {
+  background-color: rgba(151, 199, 193, 0.25);
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  height: inherit;
+  width: 100vw;
+}
+.projects h1 {
+  text-align: center;
+  margin: 0;
+  padding: 2% 0 1%;
+}
+.projects h2 {
+  text-align: center;
+  margin: 0;
+  padding: 0 0 1%;
+}
+.projects p {
+  margin: 0;
+}
+.projects .row {
+  display: flex;
+}
+.projects .row .column {
+  flex: 1;
+  margin: 1%;
+  padding: 2%;
+  background-color: white;
+  border-radius: 40px;
 }
 
 .text-button {

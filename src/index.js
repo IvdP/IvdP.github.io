@@ -1,11 +1,12 @@
 import m from 'mithril';
 import Header from './components/Header';
 import HeaderBig from './components/HeaderBig';
+import Introduction from './components/Introduction';
 import MainBox from './components/MainBox';
 import Footer from './components/Footer';
 
 const homepage = {
-  view: () => m('main', m(MainBox)),
+  view: () => m('main', m(Introduction), m(MainBox)),
 }
 
 m.route(document.body, '/', {

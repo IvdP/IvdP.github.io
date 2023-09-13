@@ -17,16 +17,16 @@ const Header: m.Component = {
       <div id='header-color'>
       </div>
       <div id='navigation'>
-        <div class='title'>
+        <div id='title'>
           <h1>Ilse van de Peppel</h1>
         </div>
-        <div class='pages'>
+        <div id='pages'>
           {m(m.route.Link, { href: '/' }, 'Home')}
           {m(m.route.Link, { href: '/projects' }, 'Projects')}
           {m(m.route.Link, { href: '/about' }, 'About')}
           {m(m.route.Link, { href: '/contact' }, 'Contact')}
         </div>
-        <div class='pages-mobile'>
+        <div id='pages-mobile'>
           <button id="nav-closed" onclick={() => { openNavigation() }}>
             <i class="fa fa-bars" />
           </button>

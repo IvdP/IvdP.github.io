@@ -3,7 +3,8 @@ $color-black-bg: rgb(0, 0, 0, 0.1);
 $color-white: white;
 $color-white-bg: rgb(255, 255, 255, 0.7);
 $color: #97c7c1;
-$color-bg: rgb(32, 178, 170, 0.2);
+$color-2: #f4aeb5;
+$color-2-bg: rgb(244, 174, 181, 0.5);
 $color-none: transparent;
 
 @mixin button-styling($text-color, $background-color, $text-color-hover, $background-color-hover) {

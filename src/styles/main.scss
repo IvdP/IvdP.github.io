@@ -9,6 +9,11 @@
   transition: all 0.5s ease;
 }
 
+html {
+  scroll-padding-top: 150px;
+  scroll-behavior: smooth;
+}
+
 // HEADER
 header {
   margin: 0;
@@ -23,31 +28,28 @@ header {
 
   #header-color {
     height: 50px;
-    background-color: $color;
   }
 
   #navigation {
     height: 100px;
-    background-color: $color-white;
     display: flex;
     align-items: center;
-    box-shadow: 0 8px 10px $color-black-bg;
-
-    >div {
-      flex: 1;
-    }
 
     #title {
+      flex: 1;
       margin-left: 10%;
+
+      h1 {
+        font-size: 30px;
+        margin: 0;
+      }
     }
 
     #pages {
-      text-align: right;
-      margin-right: 10%;
+      flex: 1;
 
       a {
         font-size: 20px;
-        color: $color-black;
         text-decoration: none;
         padding-left: 20px;
       }
@@ -58,8 +60,7 @@ header {
     }
 
     #pages-mobile {
-      text-align: right;
-      margin-right: 10%;
+      flex: 1;
 
       button {
         font-size: 30px;
@@ -89,7 +90,7 @@ header {
           font-size: 20px;
           display: block;
           padding: 10px 20px;
-          @include button-styling($color-black, $color-none, $color-white, $color);
+          @include button-styling($color-black, $color-none, $color-white, $color-green);
         }
       }
 
@@ -100,9 +101,59 @@ header {
   }
 }
 
-.sticktotop {
-  position: absolute;
-  top: 0;
+.whiteheader {
+  #header-color {
+    background-color: $color-green;
+  }
+
+  #navigation {
+    background-color: $color-white;
+    box-shadow: 0 8px 10px $color-black-bg;
+
+    #pages,
+    #pages-mobile {
+      text-align: right;
+      margin-right: 10%;
+
+      a {
+        color: $color-black;
+      }
+
+      #nav-closed {
+        @include button-styling($color-black, $color-none, $color-black, $color-none);
+      }
+    }
+  }
+}
+
+.transparentheader {
+  #header-color {
+    background-color: $color-none;
+  }
+
+  #navigation {
+    background-color: transparent;
+    box-shadow: unset;
+
+    #title {
+      display: none;
+    }
+
+    #pages,
+    #pages-mobile {
+      text-align: center;
+      margin: 0;
+
+      a {
+        color: $color-white;
+        padding: 0 10px;
+      }
+
+      #nav-closed {
+        @include button-styling($color-white, $color-none, $color-white, $color-none);
+      }
+    }
+  }
 }
 
 #headerbig {
@@ -120,30 +171,11 @@ header {
       object-position: 0 0;
     }
   }
+}
 
-  #header-color,
-  #navigation {
-    background-color: transparent;
-    box-shadow: unset;
-
-    #title {
-      display: none;
-    }
-
-    #pages,
-    #pages-mobile {
-      text-align: center;
-      margin: 0;
-
-      a {
-        color: $color-white;
-      }
-
-      #nav-closed {
-        @include button-styling($color-white, $color-none, $color-white, $color-none);
-      }
-    }
-  }
+.sticktotop {
+  position: absolute;
+  top: 0;
 }
 
 // BODY
@@ -172,7 +204,13 @@ p {
 p,
 button,
 a {
-  font-size: 16px;
+  font-size: 18px;
+}
+
+.textlink {
+  font-family: 'Nunito', sans-serif;
+  text-decoration: underline;
+  color: $color-green-dark;
 }
 
 main {
@@ -180,15 +218,11 @@ main {
 }
 
 #introduction {
+  display: flex;
   position: absolute;
   width: 100vw;
   height: 50vh;
   top: 25vh;
-
-  // display: grid;
-  // grid-template-columns: 1fr 2fr;
-
-  display: flex;
 
   .empty {
     flex: 1;
@@ -199,7 +233,7 @@ main {
 
     img {
       height: 50vh;
-      border-radius: 100%;
+      border-radius: 50%;
       border-style: solid;
       border-color: $color-white;
       border-width: 10px;
@@ -314,21 +348,90 @@ main {
   }
 }
 
+.chev-down {
+  display: block;
+  position: absolute;
+  top: 95vh;
+  left: 48vw;
+  height: 3vh;
+  width: 4vw;
+  text-align: center;
 
+  a {
+    @include button-styling($color-white, $color-none, $color-white, $color-none);
+  }
+
+  @media (max-width: 810px) {
+    display: none;
+  }
+}
+
+.about {
+  margin: 5% 10%;
+  // height: 600px;
+
+  .row {
+    display: flex;
+    // height: inherit;
+  }
+
+  .info {
+    flex: 3;
+  }
+
+  .profile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-pink-bg;
+    border-radius: 40px;
+    padding: 2%;
+
+    .profile-name {
+      flex: 1;
+      padding: 2%;
+      text-align: center;
+
+      h1 {
+        margin: 0;
+      }
+    }
+
+    .profile-pic {
+      flex: 1;
+      padding: 2%;
+
+      img {
+        background-color: $color-white;
+        padding: 2%;
+        width: 96%;
+      }
+    }
+
+    .profile-text {
+      flex: 1;
+      padding: 2%;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
 
 // BUTTONS
 .text-button {
   margin-bottom: 20px;
   padding: 5px 10px;
   border-radius: 10px;
-  @include button-styling($color-black, $color-2-bg, $color-white, $color-2);
+  @include button-styling($color-black, $color-pink-bg, $color-white, $color-pink);
 }
 
 .arrow-button {
   position: absolute;
   height: 100%;
   width: 100%;
-  @include button-styling($color-black, $color-none, $color-white, $color);
+  @include button-styling($color-black, $color-none, $color-white, $color-green);
 
   @media (max-width:430px) {
     position: relative;
@@ -345,10 +448,9 @@ main {
 
 // FOOTER
 footer {
-  background-color: $color;
+  background-color: $color-green;
   color: $color-white;
   text-align: center;
-  margin-top: 1%;
 
   p {
     padding: 1%;

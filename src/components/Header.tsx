@@ -1,5 +1,6 @@
 import m from 'mithril';
 import "../styles/main.scss"
+import backToTop from '../utils/backToTop';
 
 function openNavigation() {
   document.getElementById("nav-closed").style.display = "none";
@@ -11,9 +12,13 @@ function closeNavigation() {
   document.getElementById("nav-open").style.display = "none";
 }
 
-const Header: m.Component = {
-  view: () => (
-    <div id='header'>
+interface Attrs {
+  color?: string;
+}
+
+const Header: m.Component<Attrs> = {
+  view: (vnode) => (
+    <div id='header' class={vnode.attrs.color ? vnode.attrs.color : 'whiteheader'}>
       <div id='header-color'>
       </div>
       <div id='navigation'>
@@ -21,10 +26,10 @@ const Header: m.Component = {
           <h1>Ilse van de Peppel</h1>
         </div>
         <div id='pages'>
-          {m(m.route.Link, { href: '/' }, 'Home')}
-          {m(m.route.Link, { href: '/projects' }, 'Projects')}
-          {m(m.route.Link, { href: '/about' }, 'About')}
-          {m(m.route.Link, { href: '/contact' }, 'Contact')}
+          <a href='/' onclick={() => { backToTop() }}>Home</a>
+          <a href='#anchor_about'>Over mij</a>
+          <a href='/'>Projecten</a>
+          <a href='/'>Contact</a>
         </div>
         <div id='pages-mobile'>
           <button id="nav-closed" onclick={() => { openNavigation() }}>
@@ -37,8 +42,8 @@ const Header: m.Component = {
             </button>
 
             {m(m.route.Link, { href: '/' }, 'Home')}
-            {m(m.route.Link, { href: '/projects' }, 'Projects')}
-            {m(m.route.Link, { href: '/about' }, 'About')}
+            {m(m.route.Link, { href: '/about' }, 'Over mij')}
+            {m(m.route.Link, { href: '/projects' }, 'Projecten')}
             {m(m.route.Link, { href: '/contact' }, 'Contact')}
           </div>
         </div>

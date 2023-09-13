@@ -9,6 +9,11 @@
   transition: all 0.5s ease;
 }
 
+html {
+  scroll-padding-top: 150px;
+  scroll-behavior: smooth;
+}
+
 header {
   margin: 0;
   padding: 0;
@@ -22,28 +27,25 @@ header {
 }
 #header #header-color {
   height: 50px;
-  background-color: #97c7c1;
 }
 #header #navigation {
   height: 100px;
-  background-color: white;
   display: flex;
   align-items: center;
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-}
-#header #navigation > div {
-  flex: 1;
 }
 #header #navigation #title {
+  flex: 1;
   margin-left: 10%;
 }
+#header #navigation #title h1 {
+  font-size: 30px;
+  margin: 0;
+}
 #header #navigation #pages {
-  text-align: right;
-  margin-right: 10%;
+  flex: 1;
 }
 #header #navigation #pages a {
   font-size: 20px;
-  color: black;
   text-decoration: none;
   padding-left: 20px;
 }
@@ -53,8 +55,7 @@ header {
   }
 }
 #header #navigation #pages-mobile {
-  text-align: right;
-  margin-right: 10%;
+  flex: 1;
 }
 #header #navigation #pages-mobile button {
   font-size: 30px;
@@ -106,9 +107,68 @@ header {
   }
 }
 
-.sticktotop {
-  position: absolute;
-  top: 0;
+.whiteheader #header-color {
+  background-color: #97c7c1;
+}
+.whiteheader #navigation {
+  background-color: white;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+.whiteheader #navigation #pages,
+.whiteheader #navigation #pages-mobile {
+  text-align: right;
+  margin-right: 10%;
+}
+.whiteheader #navigation #pages a,
+.whiteheader #navigation #pages-mobile a {
+  color: black;
+}
+.whiteheader #navigation #pages #nav-closed,
+.whiteheader #navigation #pages-mobile #nav-closed {
+  color: black;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+.whiteheader #navigation #pages #nav-closed:hover,
+.whiteheader #navigation #pages-mobile #nav-closed:hover {
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.transparentheader #header-color {
+  background-color: transparent;
+}
+.transparentheader #navigation {
+  background-color: transparent;
+  box-shadow: unset;
+}
+.transparentheader #navigation #title {
+  display: none;
+}
+.transparentheader #navigation #pages,
+.transparentheader #navigation #pages-mobile {
+  text-align: center;
+  margin: 0;
+}
+.transparentheader #navigation #pages a,
+.transparentheader #navigation #pages-mobile a {
+  color: white;
+  padding: 0 10px;
+}
+.transparentheader #navigation #pages #nav-closed,
+.transparentheader #navigation #pages-mobile #nav-closed {
+  color: white;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+.transparentheader #navigation #pages #nav-closed:hover,
+.transparentheader #navigation #pages-mobile #nav-closed:hover {
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 #headerbig {
@@ -125,44 +185,10 @@ header {
   object-fit: cover;
   object-position: 0 0;
 }
-#headerbig #header-color,
-#headerbig #navigation {
-  background-color: transparent;
-  box-shadow: unset;
-}
-#headerbig #header-color #title,
-#headerbig #navigation #title {
-  display: none;
-}
-#headerbig #header-color #pages,
-#headerbig #header-color #pages-mobile,
-#headerbig #navigation #pages,
-#headerbig #navigation #pages-mobile {
-  text-align: center;
-  margin: 0;
-}
-#headerbig #header-color #pages a,
-#headerbig #header-color #pages-mobile a,
-#headerbig #navigation #pages a,
-#headerbig #navigation #pages-mobile a {
-  color: white;
-}
-#headerbig #header-color #pages #nav-closed,
-#headerbig #header-color #pages-mobile #nav-closed,
-#headerbig #navigation #pages #nav-closed,
-#headerbig #navigation #pages-mobile #nav-closed {
-  color: white;
-  background-color: transparent;
-  border: none;
-  text-decoration: none;
-}
-#headerbig #header-color #pages #nav-closed:hover,
-#headerbig #header-color #pages-mobile #nav-closed:hover,
-#headerbig #navigation #pages #nav-closed:hover,
-#headerbig #navigation #pages-mobile #nav-closed:hover {
-  color: white;
-  background-color: transparent;
-  cursor: pointer;
+
+.sticktotop {
+  position: absolute;
+  top: 0;
 }
 
 body {
@@ -189,7 +215,13 @@ p {
 p,
 button,
 a {
-  font-size: 16px;
+  font-size: 18px;
+}
+
+.textlink {
+  font-family: "Nunito", sans-serif;
+  text-decoration: underline;
+  color: #699ea9;
 }
 
 main {
@@ -197,11 +229,11 @@ main {
 }
 
 #introduction {
+  display: flex;
   position: absolute;
   width: 100vw;
   height: 50vh;
   top: 25vh;
-  display: flex;
 }
 #introduction .empty {
   flex: 1;
@@ -211,7 +243,7 @@ main {
 }
 #introduction .intro-image img {
   height: 50vh;
-  border-radius: 100%;
+  border-radius: 50%;
   border-style: solid;
   border-color: white;
   border-width: 10px;
@@ -300,6 +332,74 @@ main {
   }
 }
 
+.chev-down {
+  display: block;
+  position: absolute;
+  top: 95vh;
+  left: 48vw;
+  height: 3vh;
+  width: 4vw;
+  text-align: center;
+}
+.chev-down a {
+  color: white;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+.chev-down a:hover {
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media (max-width: 810px) {
+  .chev-down {
+    display: none;
+  }
+}
+
+.about {
+  margin: 5% 10%;
+}
+.about .row {
+  display: flex;
+}
+.about .info {
+  flex: 3;
+}
+.about .profile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(244, 174, 181, 0.5);
+  border-radius: 40px;
+  padding: 2%;
+}
+.about .profile .profile-name {
+  flex: 1;
+  padding: 2%;
+  text-align: center;
+}
+.about .profile .profile-name h1 {
+  margin: 0;
+}
+.about .profile .profile-pic {
+  flex: 1;
+  padding: 2%;
+}
+.about .profile .profile-pic img {
+  background-color: white;
+  padding: 2%;
+  width: 96%;
+}
+.about .profile .profile-text {
+  flex: 1;
+  padding: 2%;
+}
+.about .profile .profile-text p {
+  margin: 0;
+}
+
 .text-button {
   margin-bottom: 20px;
   padding: 5px 10px;
@@ -363,7 +463,6 @@ footer {
   background-color: #97c7c1;
   color: white;
   text-align: center;
-  margin-top: 1%;
 }
 footer p {
   padding: 1%;

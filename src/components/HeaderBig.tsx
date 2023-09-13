@@ -15,7 +15,7 @@ const Header: m.Component = {
       </div>
 
       <div class='sticktotop'>
-        {m(StickyHeader)}
+        {m(StickyHeader, { color: 'transparentheader' })}
       </div>
     </header>
   ),

@@ -2,14 +2,13 @@ import m from 'mithril';
 import Header from './components/Header';
 import HeaderBig from './components/HeaderBig';
 import Introduction from './components/Introduction';
-import MainBox from './components/MainBox';
+import About from './components/About';
 import Footer from './components/Footer';
 
 const homepage = {
-  view: () => m('main', m(Introduction), m(MainBox)),
+  view: () => m('main', m(Introduction), m(About)),
 }
 
 m.route(document.body, '/', {
   '/': { view: () => m('div', m(HeaderBig), m(homepage), m(Footer)) },
-  '/projects': { view: () => m('div', m(Header), m(homepage), m(Footer)) }
 });

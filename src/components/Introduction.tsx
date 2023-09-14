@@ -16,7 +16,7 @@ const Introduction: m.Component = {
         <div class='empty'></div>
       </div>
       <div class='chev-down'>
-        <a href='#anchor_about'>
+        <a href='#about'>
           <i class="fa fa-chevron-down" aria-hidden="true" />
         </a>
       </div>

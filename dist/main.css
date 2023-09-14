@@ -10,7 +10,7 @@
 }
 
 html {
-  scroll-padding-top: 175px;
+  scroll-padding-top: 150px;
   scroll-behavior: smooth;
 }
 
@@ -290,7 +290,7 @@ main .margin10 {
 }
 
 .about-section {
-  padding: 5% 10%;
+  padding: 3% 10%;
 }
 .about-section .row {
   display: flex;
@@ -309,13 +309,12 @@ main .margin10 {
   display: flex;
   flex-direction: column;
   background-color: rgba(244, 174, 181, 0.5);
-  border-radius: 40px;
+  border-radius: 10px;
   padding: 2%;
 }
 @media (max-width: 810px) {
   .about-section .profile {
     flex-direction: row;
-    border-radius: 10px;
   }
 }
 .about-section .profile .profile-name {
@@ -364,7 +363,7 @@ main .margin10 {
 }
 
 .projects-section {
-  padding: 0 10%;
+  padding: 0 10% 1%;
 }
 @media (max-width: 810px) {
   .projects-section {
@@ -381,15 +380,6 @@ main .margin10 {
     padding: 0 0 3%;
   }
 }
-.projects-section h2 {
-  text-align: center;
-  margin: 0;
-  padding: 2% 0 1%;
-}
-.projects-section p {
-  margin: 0;
-  padding: 2%;
-}
 .projects-section .row {
   display: flex;
 }
@@ -398,21 +388,84 @@ main .margin10 {
   margin: 1%;
   padding: 2%;
   background-color: white;
-  border-radius: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.projects-section .row .column h2 {
+  text-align: center;
+  margin: 0;
+  padding: 2% 0 1%;
+}
+.projects-section .row .column p {
+  margin: 0 0 2%;
+  padding: 2%;
+}
+.projects-section .row .column img {
+  width: 96%;
+  padding: 2%;
+}
+.projects-section .row .column a {
+  align-self: center;
+}
+.projects-section .row .column a i {
+  font-size: 14px;
 }
 @media (max-width: 810px) {
   .projects-section .row {
     flex-direction: column;
   }
-  .projects-section .row .column {
-    border-radius: 10px;
-  }
+}
+
+.project-section {
+  padding: 0 10%;
+  margin-top: 200px;
+}
+.project-section h1 {
+  text-align: center;
+}
+.project-section .info {
+  display: flex;
+}
+.project-section .info > div {
+  flex: 1;
+}
+.project-section img {
+  width: 100%;
+}
+
+.contact-section {
+  padding: 3% 10%;
+  text-align: center;
+}
+.contact-section .icons {
+  display: flex;
+  justify-content: center;
+}
+.contact-section .icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 50%;
+  color: black;
+  background-color: rgba(244, 174, 181, 0.5);
+  border: none;
+  text-decoration: none;
+}
+.contact-section .icons a:hover {
+  color: white;
+  background-color: #f4aeb5;
+  cursor: pointer;
 }
 
 .text-button {
-  margin-bottom: 20px;
   padding: 5px 10px;
   border-radius: 10px;
+  text-align: center;
   color: black;
   background-color: rgba(244, 174, 181, 0.5);
   border: none;
@@ -421,50 +474,6 @@ main .margin10 {
 .text-button:hover {
   color: white;
   background-color: #f4aeb5;
-  cursor: pointer;
-}
-
-.arrow-button {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  color: black;
-  background-color: transparent;
-  border: none;
-  text-decoration: none;
-}
-.arrow-button:hover {
-  color: white;
-  background-color: #97c7c1;
-  cursor: pointer;
-}
-@media (max-width: 430px) {
-  .arrow-button {
-    position: relative;
-    width: 50%;
-    color: black;
-    background-color: transparent;
-    border: none;
-    text-decoration: none;
-  }
-  .arrow-button:hover {
-    color: black;
-    background-color: transparent;
-    cursor: pointer;
-  }
-}
-
-.image-button {
-  height: 100%;
-  width: 100%;
-  color: transparent;
-  background-color: transparent;
-  border: none;
-  text-decoration: none;
-}
-.image-button:hover {
-  color: transparent;
-  background-color: transparent;
   cursor: pointer;
 }
 

@@ -17,14 +17,6 @@ const About: m.Component = {
               <br /><br />
               Als je geinteresseerd bent in mijn werk, kun je <a class='textlink' href='/'>mijn projecten bekijken</a>. Als je meer over mij wilt weten, kun je <a class='textlink' href='/'>contact met mij opnemen</a>.
             </p>
-            {/* <button
-            class='text-button'
-            onclick={() => {
-              count++;
-            }}
-          >
-            I have been clicked {count} times!
-          </button> */}
           </div>
           <div class='column profile'>
             <div class='profile-name'>

@@ -4,7 +4,7 @@ import "../styles/main.scss"
 const Footer: m.Component = {
   view: () => (
     <footer>
-      <p>That's it! Hope u liked it :D</p>
+      <p>Gemaakt door Ilse van de Peppel</p>
     </footer>
   ),
 };

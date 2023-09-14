@@ -1,5 +1,6 @@
 import m from 'mithril';
 import "../styles/main.scss"
+import { projects } from '../data/projects';
 
 const Projects: m.Component = {
   view: () => (
@@ -7,18 +8,18 @@ const Projects: m.Component = {
       <div class='projects-section'>
         <h1>Mijn projecten</h1>
         <div class='row'>
-          <div class='column'>
-            <h2>Project 1</h2>
-            <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
-          </div>
-          <div class='column'>
-            <h2>Project 2</h2>
-            <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
-          </div>
-          <div class='column'>
-            <h2>Project 3</h2>
-            <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
-          </div>
+          {projects.map((project) => (
+            <div class='column'>
+              <div>
+                <h2>{project.name}</h2>
+                <img src={project.img} alt={project.alt} />
+                <p>{project.description}</p>
+              </div>
+              {project.description ? (
+                m(m.route.Link, { href: '/project/' + project.id, class: 'text-button' }, 'Lees meer')
+              ) : null}
+            </div>
+          ))}
         </div>
       </div>
     </div >

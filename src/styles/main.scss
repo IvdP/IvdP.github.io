@@ -43,6 +43,11 @@ header {
         font-size: 30px;
         margin: 0;
       }
+
+      @media (max-width: 810px) {
+        margin-left: 0;
+        text-align: center;
+      }
     }
 
     #pages {
@@ -59,45 +64,45 @@ header {
       }
     }
 
-    #pages-mobile {
-      flex: 1;
+  //   #pages-mobile {
+  //     flex: 1;
 
-      button {
-        font-size: 30px;
-        @include button-styling($color-black, $color-none, $color-black, $color-none);
-      }
+  //     button {
+  //       font-size: 30px;
+  //       @include button-styling($color-black, $color-none, $color-black, $color-none);
+  //     }
 
-      #nav-open {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        background-color: $color-white;
+  //     #nav-open {
+  //       position: absolute;
+  //       top: 0;
+  //       left: 0;
+  //       width: 100vw;
+  //       height: 100vh;
+  //       display: none;
+  //       flex-direction: column;
+  //       justify-content: center;
+  //       text-align: center;
+  //       background-color: $color-white;
 
-        button {
-          position: absolute;
-          top: 0;
-          right: 0;
-          margin: 25px;
-        }
+  //       button {
+  //         position: absolute;
+  //         top: 0;
+  //         right: 0;
+  //         margin: 25px;
+  //       }
 
-        a {
-          font-size: 20px;
-          display: block;
-          padding: 10px 20px;
-          @include button-styling($color-black, $color-none, $color-white, $color-green);
-        }
-      }
+  //       a {
+  //         font-size: 20px;
+  //         display: block;
+  //         padding: 10px 20px;
+  //         @include button-styling($color-black, $color-none, $color-white, $color-green);
+  //       }
+  //     }
 
-      @media (min-width: 811px) {
-        display: none;
-      }
-    }
+  //     @media (min-width: 811px) {
+  //       display: none;
+  //     }
+  //   }
   }
 }
 
@@ -119,9 +124,9 @@ header {
         color: $color-black;
       }
 
-      #nav-closed {
-        @include button-styling($color-black, $color-none, $color-black, $color-none);
-      }
+      // #nav-closed {
+      //   @include button-styling($color-black, $color-none, $color-black, $color-none);
+      // }
     }
   }
 }
@@ -149,9 +154,9 @@ header {
         padding: 0 10px;
       }
 
-      #nav-closed {
-        @include button-styling($color-white, $color-none, $color-white, $color-none);
-      }
+      // #nav-closed {
+      //   @include button-styling($color-white, $color-none, $color-white, $color-none);
+      // }
     }
   }
 }
@@ -370,11 +375,15 @@ main {
   }
 }
 
-.about {
-  margin: 5% 0;
+.about-section {
+  padding: 5% 10%;
 
   .row {
     display: flex;
+
+    @media (max-width: 810px) {
+      flex-direction: column;
+    }
   }
 
   .info {
@@ -390,6 +399,11 @@ main {
     border-radius: 40px;
     padding: 2%;
 
+    @media (max-width: 810px) {
+      flex-direction: row;
+      border-radius: 10px;
+    }
+
     .profile-name {
       flex: 1;
       padding: 2%;
@@ -397,6 +411,10 @@ main {
 
       h1 {
         margin: 0;
+      }
+
+      @media (max-width: 810px) {
+        display: none;
       }
     }
 
@@ -408,6 +426,15 @@ main {
         background-color: $color-white;
         padding: 2%;
         width: 96%;
+
+        @media (max-width: 810px) {
+          height: 96%;
+          object-fit: cover;
+        }
+      }
+
+      @media (max-width: 610px) {
+        display: none;
       }
     }
 
@@ -422,33 +449,36 @@ main {
   }
 }
 
-.projects {
-  margin: 5% 0;
-  height: 250px;
-  
-  .bg-color {
-    background-color: $color-green-bg;
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    height: inherit;
-    width: 100vw;
+#projects {
+  background-color: $color-green-bg;
+}
+
+.projects-section {
+  padding: 0 10%;
+
+  @media (max-width: 810px) {
+    padding: 3% 10%;
   }
 
   h1 {
     text-align: center;
     margin: 0;
     padding: 2% 0 1%;
+
+    @media (max-width: 810px) {
+      padding: 0 0 3%;
+    }
   }
 
   h2 {
     text-align: center;
     margin: 0;
-    padding: 0 0 1%;
+    padding: 2% 0 1%;
   }
 
-  p { 
+  p {
     margin: 0;
+    padding: 2%;
   }
 
   .row {
@@ -460,6 +490,14 @@ main {
       padding: 2%;
       background-color: $color-white;
       border-radius: 40px;
+    }
+
+    @media (max-width: 810px) {
+      flex-direction: column;
+
+      .column {
+        border-radius: 10px;
+      }
     }
   }
 }

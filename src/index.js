@@ -7,7 +7,7 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 
 const content ={
-  view: () => m('div', {class: 'margin10'}, m(About), m(Projects)),
+  view: () => m('div', m(About), m(Projects)),
 }
 
 const homepage = {

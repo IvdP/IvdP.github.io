@@ -11,7 +11,7 @@ const Introduction: m.Component = {
         </div>
         <div class='intro-text'>
           <h1>Hi! Ik ben Ilse</h1>
-          <h2>Studente webdevelopment aan de HAN</h2>
+          <h2>Student webdevelopment aan de HAN</h2>
         </div>
         <div class='empty'></div>
       </div>

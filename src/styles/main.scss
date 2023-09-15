@@ -377,18 +377,26 @@ main {
 
 .about-section {
   padding: 3% 10%;
+  display: flex;
 
-  .row {
-    display: flex;
-
-    @media (max-width: 810px) {
-      flex-direction: column;
-    }
+  @media (max-width: 810px) {
+    flex-direction: column;
   }
 
   .info {
     flex: 3;
     margin-right: 5%;
+
+    .languages {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      i {
+        font-size: 50px;
+        margin: 1%;
+      }
+    }
   }
 
   .profile {

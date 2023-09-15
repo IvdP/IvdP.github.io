@@ -291,18 +291,25 @@ main .margin10 {
 
 .about-section {
   padding: 3% 10%;
-}
-.about-section .row {
   display: flex;
 }
 @media (max-width: 810px) {
-  .about-section .row {
+  .about-section {
     flex-direction: column;
   }
 }
 .about-section .info {
   flex: 3;
   margin-right: 5%;
+}
+.about-section .info .languages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.about-section .info .languages i {
+  font-size: 50px;
+  margin: 1%;
 }
 .about-section .profile {
   flex: 1;

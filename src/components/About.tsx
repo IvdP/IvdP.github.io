@@ -29,7 +29,6 @@ const About: m.Component = {
               <p>Leeftijd: 21</p>
               <p>Woonplaats: Veenendaal</p>
               <p>Studie: HBO-ICT Webdevelopment</p>
-              <p>Stage: Orange Juice</p>
               <p>Bijbaan: Vakkenvuller bij de Albert Heijn</p>
             </div>
           </div>

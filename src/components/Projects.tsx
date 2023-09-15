@@ -12,10 +12,10 @@ const Projects: m.Component = {
             <div class='column'>
               <div>
                 <h2>{project.name}</h2>
-                <img src={project.img} alt={project.alt} />
-                <p>{project.description}</p>
+                {project.img ? (<img src={project.img} alt={project.alt} />) : null}
+                {project.description ? (<p>{project.description}</p>) : null}
               </div>
-              {project.description ? (
+              {project.fulldescription ? (
                 m(m.route.Link, { href: '/project/' + project.id, class: 'text-button' }, 'Lees meer')
               ) : null}
             </div>

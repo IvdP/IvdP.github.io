@@ -9,7 +9,7 @@ export interface Project {
   img: string;
   alt: string;
   description: string;
-  fulldescription: string[];
+  fulldescription?: string[];
   github?: string;
   media?: Image[];
 }
@@ -35,7 +35,5 @@ export const projects: Project[] = [{
   name: 'Komt nog...',
   img: '',
   alt: '',
-  description: '',
-  fulldescription: [],
-  github: ''
+  description: ''
 }];

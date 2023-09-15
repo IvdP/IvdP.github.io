@@ -63,46 +63,6 @@ header {
         display: none;
       }
     }
-
-    //   #pages-mobile {
-    //     flex: 1;
-
-    //     button {
-    //       font-size: 30px;
-    //       @include button-styling($color-black, $color-none, $color-black, $color-none);
-    //     }
-
-    //     #nav-open {
-    //       position: absolute;
-    //       top: 0;
-    //       left: 0;
-    //       width: 100vw;
-    //       height: 100vh;
-    //       display: none;
-    //       flex-direction: column;
-    //       justify-content: center;
-    //       text-align: center;
-    //       background-color: $color-white;
-
-    //       button {
-    //         position: absolute;
-    //         top: 0;
-    //         right: 0;
-    //         margin: 25px;
-    //       }
-
-    //       a {
-    //         font-size: 20px;
-    //         display: block;
-    //         padding: 10px 20px;
-    //         @include button-styling($color-black, $color-none, $color-white, $color-green);
-    //       }
-    //     }
-
-    //     @media (min-width: 811px) {
-    //       display: none;
-    //     }
-    //   }
   }
 }
 
@@ -123,10 +83,6 @@ header {
       a {
         color: $color-black;
       }
-
-      // #nav-closed {
-      //   @include button-styling($color-black, $color-none, $color-black, $color-none);
-      // }
     }
   }
 }
@@ -137,7 +93,7 @@ header {
   }
 
   #navigation {
-    background-color: transparent;
+    background-color: $color-none;
     box-shadow: unset;
 
     #title {
@@ -153,10 +109,6 @@ header {
         color: $color-white;
         padding: 0 10px;
       }
-
-      // #nav-closed {
-      //   @include button-styling($color-white, $color-none, $color-white, $color-none);
-      // }
     }
   }
 }
@@ -393,6 +345,7 @@ main {
       flex-wrap: wrap;
 
       i {
+        color: $color-pink;
         font-size: 50px;
         margin: 1%;
       }
@@ -533,8 +486,16 @@ main {
   .info {
     display: flex;
 
+    @media (max-width: 810px) {
+      flex-direction: column;
+    }
+
     >div {
       flex: 1;
+      
+      img { 
+        padding: 1% 0 1% 1%;
+      }
     }
   }
 

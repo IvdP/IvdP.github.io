@@ -29,7 +29,7 @@ const About: m.Component = {
           </div>
 
           <p>
-            Als je geinteresseerd bent in mijn werk, kun je <a class='textlink' href='/'>mijn projecten bekijken</a>. Als je meer over mij wilt weten, kun je <a class='textlink' href='/'>contact met mij opnemen</a>.
+            Als je graag een kijkje wil nemen naar mijn projecten, dan kun je deze <a class='textlink' href='/'>hier vinden</a>. Mocht je mij persoonlijk willen benaderen, dan kun je <a class='textlink' href='/'>hier contact met mij opnemen</a>.
           </p>
         </div>
         <div class='column profile'>

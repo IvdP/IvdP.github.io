@@ -308,6 +308,7 @@ main .margin10 {
   flex-wrap: wrap;
 }
 .about-section .info .languages i {
+  color: #f4aeb5;
   font-size: 50px;
   margin: 1%;
 }
@@ -435,8 +436,16 @@ main .margin10 {
 .project-section .info {
   display: flex;
 }
+@media (max-width: 810px) {
+  .project-section .info {
+    flex-direction: column;
+  }
+}
 .project-section .info > div {
   flex: 1;
+}
+.project-section .info > div img {
+  padding: 1% 0 1% 1%;
 }
 .project-section img {
   width: 100%;

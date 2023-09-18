@@ -1,6 +1,11 @@
 /*!***************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss ***!
   \***************************************************************************************************************/
+header, body {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: SundayHotdog;
   src: url(33fc59dabb079e946046.ttf);
@@ -14,11 +19,6 @@ html {
   scroll-behavior: smooth;
 }
 
-header {
-  margin: 0;
-  padding: 0;
-}
-
 #header {
   position: fixed;
   width: 100vw;
@@ -29,9 +29,11 @@ header {
   height: 50px;
 }
 #header #navigation {
-  height: 100px;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
+  height: 100px;
 }
 #header #navigation #title {
   flex: 1;
@@ -117,13 +119,11 @@ header {
   top: 0;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
 body > div {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   min-height: 100vh;
 }
 
@@ -217,6 +217,7 @@ main .margin10 {
 }
 @media (max-width: 810px) {
   #introduction {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -302,7 +303,9 @@ main .margin10 {
 }
 .about-section .info .languages {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 .about-section .info .languages i {
@@ -314,6 +317,8 @@ main .margin10 {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   background-color: rgba(244, 174, 181, 0.5);
   border-radius: 10px;
   padding: 2%;
@@ -391,13 +396,14 @@ main .margin10 {
 }
 .projects-section .row .column {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
   margin: 1%;
   padding: 2%;
   background-color: white;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .projects-section .row .column h2 {
   text-align: center;
@@ -455,10 +461,13 @@ main .margin10 {
 }
 .contact-section .icons {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: stretch;
 }
 .contact-section .icons a {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 50px;

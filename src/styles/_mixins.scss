@@ -1,0 +1,19 @@
+@mixin button($text-color, $background-color, $text-color-hover, $background-color-hover) {
+  color: $text-color;
+  background-color: $background-color;
+  border: none;
+  text-decoration: none;
+
+  &:hover {
+    color: $text-color-hover;
+    background-color: $background-color-hover;
+    cursor: pointer;
+  }
+}
+
+@mixin flexbox($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

@@ -2,16 +2,6 @@ import m from 'mithril';
 import "../styles/main.scss"
 import backToTop from '../utils/backToTop';
 
-// function openNavigation() {
-//   document.getElementById("nav-closed").style.display = "none";
-//   document.getElementById("nav-open").style.display = "flex";
-// }
-
-// function closeNavigation() {
-//   document.getElementById("nav-closed").style.display = "inline";
-//   document.getElementById("nav-open").style.display = "none";
-// }
-
 interface Attrs {
   color?: string;
 }
@@ -46,22 +36,6 @@ const Header: m.Component<Attrs> = {
           {m.route.get() == '/' || m.route.get() == '' ? (<a href='#projects'>Projecten</a>) : (m(m.route.Link, { href: '/#projects' }, 'Projecten'))}
           {m.route.get() == '/' || m.route.get() == '' ? (<a href='#contact'>Contact</a>) : (m(m.route.Link, { href: '/#contact' }, 'Contact'))}
         </div>
-        {/* <div id='pages-mobile'>
-          <button id="nav-closed" onclick={() => { openNavigation() }}>
-            <i class="fa fa-bars" />
-          </button>
-
-          <div id="nav-open">
-            <button onclick={() => { closeNavigation() }}>
-              <i class="fa fa-times" />
-            </button>
-
-            {m(m.route.Link, { href: '/' }, 'Home')}
-            {m(m.route.Link, { href: '/about' }, 'Over mij')}
-            {m(m.route.Link, { href: '/projects' }, 'Projecten')}
-            {m(m.route.Link, { href: '/contact' }, 'Contact')}
-          </div>
-        </div> */}
       </div>
     </div >
   ),

@@ -8,16 +8,3 @@ $color-green-dark: #699ea9;
 $color-pink: #f4aeb5;
 $color-pink-bg: rgb(244, 174, 181, 0.5);
 $color-none: transparent;
-
-@mixin button-styling($text-color, $background-color, $text-color-hover, $background-color-hover) {
-  color: $text-color;
-  background-color: $background-color;
-  border: none;
-  text-decoration: none;
-
-  &:hover {
-    color: $text-color-hover;
-    background-color: $background-color-hover;
-    cursor: pointer;
-  }
-}

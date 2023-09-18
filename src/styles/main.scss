@@ -1,4 +1,5 @@
-@import "colors";
+@use "button";
+@use "colors";
 
 @font-face {
   font-family: SundayHotdog;
@@ -68,12 +69,12 @@ header {
 
 .whiteheader {
   #header-color {
-    background-color: $color-green;
+    background-color: colors.$color-green;
   }
 
   #navigation {
-    background-color: $color-white;
-    box-shadow: 0 8px 10px $color-black-bg;
+    background-color: colors.$color-white;
+    box-shadow: 0 8px 10px colors.$color-black-bg;
 
     #pages,
     #pages-mobile {
@@ -81,7 +82,7 @@ header {
       margin-right: 10%;
 
       a {
-        color: $color-black;
+        color: colors.$color-black;
       }
     }
   }
@@ -89,11 +90,11 @@ header {
 
 .transparentheader {
   #header-color {
-    background-color: $color-none;
+    background-color: colors.$color-none;
   }
 
   #navigation {
-    background-color: $color-none;
+    background-color: colors.$color-none;
     box-shadow: unset;
 
     #title {
@@ -106,7 +107,7 @@ header {
       margin: 0;
 
       a {
-        color: $color-white;
+        color: colors.$color-white;
         padding: 0 10px;
       }
     }
@@ -165,7 +166,7 @@ a {
 .textlink {
   font-family: 'Nunito', sans-serif;
   text-decoration: underline;
-  color: $color-green-dark;
+  color: colors.$color-green-dark;
 }
 
 main {
@@ -194,7 +195,7 @@ main {
       height: 50vh;
       border-radius: 50%;
       border-style: solid;
-      border-color: $color-white;
+      border-color: colors.$color-white;
       border-width: 10px;
       margin: -10px;
     }
@@ -202,7 +203,7 @@ main {
 
   .intro-text {
     flex: 3;
-    color: $color-white;
+    color: colors.$color-white;
     padding-left: 5vw;
     align-self: center;
 
@@ -317,7 +318,7 @@ main {
   text-align: center;
 
   a {
-    @include button-styling($color-white, $color-none, $color-white, $color-none);
+    @include button.button-styling(colors.$color-white, colors.$color-none, colors.$color-white, colors.$color-none);
   }
 
   @media (max-width: 810px) {
@@ -343,7 +344,7 @@ main {
       flex-wrap: wrap;
 
       i {
-        color: $color-pink;
+        color: colors.$color-pink;
         font-size: 50px;
         margin: 1%;
       }
@@ -354,7 +355,7 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: $color-pink-bg;
+    background-color: colors.$color-pink-bg;
     border-radius: 10px;
     padding: 2%;
 
@@ -381,7 +382,7 @@ main {
       padding: 2%;
 
       img {
-        background-color: $color-white;
+        background-color: colors.$color-white;
         padding: 2%;
         width: 96%;
 
@@ -408,7 +409,7 @@ main {
 }
 
 #projects {
-  background-color: $color-green-bg;
+  background-color: colors.$color-green-bg;
 }
 
 .projects-section {
@@ -435,7 +436,7 @@ main {
       flex: 1;
       margin: 1%;
       padding: 2%;
-      background-color: $color-white;
+      background-color: colors.$color-white;
       border-radius: 10px;
 
       display: flex;
@@ -490,8 +491,8 @@ main {
 
     >div {
       flex: 1;
-      
-      img { 
+
+      img {
         padding: 1% 0 1% 1%;
       }
     }
@@ -518,7 +519,7 @@ main {
       height: 50px;
       margin: 0 10px;
       border-radius: 50%;
-      @include button-styling($color-black, $color-pink-bg, $color-white, $color-pink);
+      @include button.button-styling(colors.$color-black, colors.$color-pink-bg, colors.$color-white, colors.$color-pink);
     }
   }
 }
@@ -528,13 +529,13 @@ main {
   padding: 5px 10px;
   border-radius: 10px;
   text-align: center;
-  @include button-styling($color-black, $color-pink-bg, $color-white, $color-pink);
+  @include button.button-styling(colors.$color-black, colors.$color-pink-bg, colors.$color-white, colors.$color-pink);
 }
 
 // FOOTER
 footer {
-  background-color: $color-green;
-  color: $color-white;
+  background-color: colors.$color-green;
+  color: colors.$color-white;
   text-align: center;
 
   p {

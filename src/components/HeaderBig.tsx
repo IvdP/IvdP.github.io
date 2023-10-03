@@ -1,7 +1,7 @@
 import m from 'mithril';
 import "../styles/main.scss"
 import StickyHeader from './Header';
-import scrollFunction from '../utils/scroll_logic';
+import scrollFunction from '../utils/scrollHeader';
 
 window.onscroll = function () { scrollFunction() }
 

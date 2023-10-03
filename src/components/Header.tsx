@@ -1,21 +1,10 @@
 import m from 'mithril';
 import "../styles/main.scss"
-import backToTop from '../utils/backToTop';
+import { backToTop } from '../utils/backToTop';
+import { scrollToAnchor } from '../utils/toAnchor';
 
 interface Attrs {
   color?: string;
-}
-
-function scrollToAnchor() {
-  const params = m.route.get();
-
-  if (params == '/#about' || params == '/#projects' || params == '/#contact') {
-    m.route.set('/');
-    const targetElement = document.getElementById(params.substring(2));
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
-  }
 }
 
 const Header: m.Component<Attrs> = {

@@ -17,7 +17,7 @@ const Header: m.Component<Attrs> = {
       </div>
       <div id='navigation'>
         <div id='title'>
-          <h1>Ilse van de Peppel</h1>
+          <h1>{m(m.route.Link, { href: '/', onclick: () => { backToTop() } }, 'Ilse van de Peppel')}</h1>
         </div>
         <div id='pages'>
           {m(m.route.Link, { href: '/', onclick: () => { backToTop() } }, 'Home')}

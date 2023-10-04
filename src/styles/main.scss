@@ -40,8 +40,13 @@ header {
       margin-left: 10%;
 
       h1 {
-        font-size: 30px;
         margin: 0;
+
+        a {
+          font-size: 30px;
+          color: colors.$color-black;
+          text-decoration: none;
+        }
       }
 
       @media (max-width: 810px) {
@@ -478,6 +483,8 @@ main {
 
     >div {
       flex: 1;
+
+      margin-bottom: 10px;
 
       img {
         padding: 1% 0 1% 1%;

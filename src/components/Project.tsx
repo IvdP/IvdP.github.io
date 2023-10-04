@@ -1,12 +1,14 @@
 import m from 'mithril';
 import "../styles/main.scss"
 import { Project, projects } from '../data/projects';
+import { backToTop } from '../utils/backToTop';
 
 let project: Project;
 
 const Project: m.Component = {
   oninit: () => {
     project = projects.find((project) => project.id == m.route.param("id"));
+    backToTop();
   },
   view: () => (
     <div id='project'>

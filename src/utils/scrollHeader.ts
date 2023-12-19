@@ -1,6 +1,6 @@
 import m from 'mithril';
 
-function scrollFunction() {
+export function scrollFunction() {
   const route: string = m.route.get();
   
   if (route === "/" || route === "") {
@@ -15,5 +15,3 @@ function scrollFunction() {
     }
   }
 }
-
-export default scrollFunction;

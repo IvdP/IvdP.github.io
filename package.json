@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mithril": "^2.2.2"
+    "mithril": "^2.2.2",
+    "mithril-tsx-component": "^3.0.1"
   },
   "devDependencies": {
     "@types/mithril": "^2.0.14",

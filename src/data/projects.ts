@@ -3,7 +3,7 @@ export interface Image {
   alt: string;
 }
 
-export interface Project {
+export interface IProject {
   id: string;
   name: string;
   img: string;
@@ -14,7 +14,7 @@ export interface Project {
   media?: Image[];
 }
 
-export const projects: Project[] = [{
+export const projects: IProject[] = [{
   id: 'studentassistent',
   name: 'Studentassistent AI',
   img: 'src\\media\\studentassistent.png',

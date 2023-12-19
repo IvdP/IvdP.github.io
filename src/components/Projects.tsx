@@ -1,10 +1,11 @@
 import m from 'mithril';
 import "../styles/main.scss"
 import { projects } from '../data/projects';
+import { MithrilTsxComponent } from '../../node_modules/mithril-tsx-component/index';
 
-const Projects: m.Component = {
-  view: () => (
-    <div id='projects'>
+export class Projects extends MithrilTsxComponent<{}> {
+  view() {
+    return <div id='projects'>
       <div class='projects-section'>
         <h1>Mijn projecten</h1>
         <div class='row'>
@@ -22,8 +23,6 @@ const Projects: m.Component = {
           ))}
         </div>
       </div>
-    </div >
-  ),
-};
-
-export default Projects;
+    </div>
+  }
+}

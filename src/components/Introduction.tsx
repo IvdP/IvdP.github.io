@@ -1,9 +1,10 @@
 import m from 'mithril';
 import "../styles/main.scss"
+import { MithrilTsxComponent } from '../../node_modules/mithril-tsx-component/index';
 
-const Introduction: m.Component = {
-  view: () => (
-    <div>
+export class Introduction extends MithrilTsxComponent<{}> {
+  view() {
+    return <div>
       <div id='introduction'>
         <div class='empty'></div>
         <div class='intro-image'>
@@ -21,7 +22,5 @@ const Introduction: m.Component = {
         </a>
       </div>
     </div>
-  ),
-};
-
-export default Introduction;
+  }
+}

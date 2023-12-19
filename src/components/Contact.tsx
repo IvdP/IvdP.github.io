@@ -1,9 +1,10 @@
 import m from 'mithril';
 import "../styles/main.scss"
+import { MithrilTsxComponent } from '../../node_modules/mithril-tsx-component/index';
 
-const Contact: m.Component = {
-  view: () => (
-    <div id='contact'>
+export class Contact extends MithrilTsxComponent<{}> {
+  view() {
+    return <div id='contact'>
       <div class='contact-section'>
         <div class='info'>
           <h1>Neem contact met me op</h1>
@@ -16,7 +17,5 @@ const Contact: m.Component = {
         </div>
       </div>
     </div>
-  ),
-};
-
-export default Contact;
+  }
+}

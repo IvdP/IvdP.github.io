@@ -2,17 +2,19 @@ import m from 'mithril';
 import "../styles/main.scss"
 import { backToTop } from '../utils/backToTop';
 import { scrollToAnchor } from '../utils/toAnchor';
+import { MithrilTsxComponent } from '../../node_modules/mithril-tsx-component/index';
 
 interface Attrs {
   color?: string;
 }
 
-const Header: m.Component<Attrs> = {
-  oncreate: () => {
+export class StickyHeader extends MithrilTsxComponent<Attrs> {
+  oncreate() {
     scrollToAnchor();
-  },
-  view: (vnode) => (
-    <div id='header' class={vnode.attrs.color ? vnode.attrs.color : 'whiteheader'}>
+  }
+
+  view(v: m.Vnode<Attrs>) {
+    return <div id='header' class={v.attrs.color ? v.attrs.color : 'whiteheader'}>
       <div id='header-color'>
       </div>
       <div id='navigation'>
@@ -27,7 +29,5 @@ const Header: m.Component<Attrs> = {
         </div>
       </div>
     </div >
-  ),
-};
-
-export default Header;
+  }
+}

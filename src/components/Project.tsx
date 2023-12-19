@@ -1,17 +1,19 @@
 import m from 'mithril';
 import "../styles/main.scss"
-import { Project, projects } from '../data/projects';
+import { IProject, projects } from '../data/projects';
 import { backToTop } from '../utils/backToTop';
+import { MithrilTsxComponent } from '../../node_modules/mithril-tsx-component/index';
 
-let project: Project;
+let project: IProject;
 
-const Project: m.Component = {
-  oninit: () => {
+export class Project extends MithrilTsxComponent<{}> {
+  oninit() {
     project = projects.find((project) => project.id == m.route.param("id"));
     backToTop();
-  },
-  view: () => (
-    <div id='project'>
+  }
+
+  view() {
+    return <div id='project'>
       <div class='project-section'>
         <h1>{project.name}</h1>
         <div class='info'>
@@ -25,8 +27,6 @@ const Project: m.Component = {
           </div>
         </div>
       </div>
-    </div >
-  ),
-};
-
-export default Project;
+    </div>
+  }
+}

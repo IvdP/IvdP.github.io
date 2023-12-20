@@ -28,6 +28,6 @@ export class StickyHeader extends MithrilTsxComponent<Attrs> {
           {m.route.get() == '/' || m.route.get() == '' ? (<a href='#contact'>Contact</a>) : (m(m.route.Link, { href: '/#contact' }, 'Contact'))}
         </div>
       </div>
-    </div >
+    </div>
   }
 }
